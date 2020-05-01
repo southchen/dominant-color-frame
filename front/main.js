@@ -11,6 +11,11 @@ const options = {
 };
 function handleFiles(files) {
   for (let file of files) {
+    var imageType = /^image\//;
+
+    if (!imageType.test(file.type)) {
+      continue;
+    }
     //console.log(files);
     let image = new Image();
     image.file = file;
