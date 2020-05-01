@@ -26,4 +26,4 @@ Can be run simply in the html file. Or I just set up a local server on port 2222
 
 
 
-<img src="Untitled Diagram.jpg" alt="Sample" style="zoom:67%;" />
+<img src="Untitled Diagram.jpg" alt="Sample" style="zoom:45%;" />
