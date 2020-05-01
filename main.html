@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Access-Control-Allow-Origin" content="*" />
+    <meta http-equiv="Content-Language" content="en" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/semantic-ui/2.4.1/components/button.min.css"
+      rel="stylesheet"
+    />
+    <title>Suare Photo with Dominant-Color-Frame</title>
+  </head>
+
+  <body>
+    <div class="formcontainer">
+      <form>
+        <input
+          type="file"
+          name="img"
+          multiple
+          onchange="handleFiles(this.files)"
+        />
+
+        <br />
+      </form>
+      <button class="ui blue button" id="add">
+        Add shadow
+      </button>
+      <button class="ui teal button" id="remove">
+        Remove shadow
+      </button>
+      <button class="ui olive button" id="download">Download All</button>
+    </div>
+
+    <div class="container"></div>
+
+    <script type="text/javascript" src="/main.js"></script>
+  </body>
+</html>
