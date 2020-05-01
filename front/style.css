@@ -1,11 +1,13 @@
 :root {
-  font-size: 10px;
+  font-size: 16px;
 }
 h2 {
   font-size: 20px;
+  margin-top: 3px;
 }
 * {
   box-sizing: border-box;
+  margin-top: 0;
 }
 
 .body {
@@ -35,4 +37,10 @@ canvas {
 }
 input {
   margin-bottom: 4px;
+}
+a {
+  text-decoration: none;
+  color: black;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 14px;
 }
