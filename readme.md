@@ -1,6 +1,6 @@
 ## Frame images into square with their dominant color
 
-__Pure front-end app using FileReader Web API__
+__Pure front-end app using FileReader & Canvas Web API__
 
 ### The demand
 
@@ -12,6 +12,8 @@ So, I have come up with this solution. Wrapping the photo with its dominat color
 
 ### Features
 
+No 3-rd party library (except the style library Semantic). Pure vanilla javascript.
+
 It's pure front-end. 
 
 Support multiple images upload and batch download.
@@ -19,6 +21,13 @@ Support multiple images upload and batch download.
 Toggle the output with/without shadow beneath the image.
 
 Can be run simply in the html file. Or I just set up a local server on port 2222.
+
+### Implementation
+
+FileReader & Canvas Web API
+Promisify the function of resizing of file before its rendering on page
+
+
 
 ### Sample
 
