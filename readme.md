@@ -2,39 +2,33 @@
 
 __Pure front-end app using FileReader & Canvas Web API__
 
-<a href="https://github.com/southchen/dominant-color-frame/blob/master/front/main.html">Entry</a>
+<a href="https://southchen.github.io/dominant-color-frame/">Entry</a>
 
 ### The demand
 
-I love to take photos in different ratio (eg. 3:4,16:9 ) in both landscape and portrait. 
+I love to take photos in the different ratios (eg. 3:4,16:9 ) in both landscape and portrait.
 
-But this leads to one subtle issue when I was trying to upload to social media that the images in different ratio and orientation are not prefect align. And I don't want Instagram to corp the photos to destory the original compositon. 
+But this leads to one subtle issue when I was trying to upload to social media that the images in different ratios and orientations are not perfectly aligned. And I don't want Instagram to corp the photos to destroy the original composition.
 
-So, I have come up with this solution. Wrapping the photo with its dominat color looks cool (to me, at least).
+So, I have come up with this solution. Wrapping the photo with its dominant color looks cool (to me, at least).
 
 ### Features
 
 No 3-rd party library (except the style library Semantic). Pure vanilla javascript.
 
-It's pure front-end. 
+It's pure front-end.
 
 Support multiple images upload and batch download.
 
 Toggle the output with/without shadow beneath the image.
 
-Can be run simply in the html file. Or I just set up a local server on port 2222.
-
 ### Implementation
 
-FileReader & Canvas Web API
-Promisify the function of resizing of file before its rendering on page
-
+FileReader & Canvas Web API 
+Promisify the function of resizing of the file before its rendering on the page
 
 
 ### Sample
-
-
-
 
 
 <img src="Untitled Diagram.jpg" alt="Sample" style="zoom:45%;" />
