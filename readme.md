@@ -2,6 +2,8 @@
 
 __Pure front-end app using FileReader & Canvas Web API__
 
+<a href="https://github.com/southchen/dominant-color-frame/blob/master/front/main.html">Entry</a>
+
 ### The demand
 
 I love to take photos in different ratio (eg. 3:4,16:9 ) in both landscape and portrait. 
