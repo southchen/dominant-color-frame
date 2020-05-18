@@ -7,3 +7,4 @@ node_modules
 index ori.html
 bundle ori.js
 app.js
+!screen shot.png
