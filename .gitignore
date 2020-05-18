@@ -4,3 +4,6 @@ node_modules
 *.png
 .DS_Store
 !Untitled Diagram.jpg
+index ori.html
+bundle ori.js
+app.js

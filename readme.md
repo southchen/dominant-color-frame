@@ -1,8 +1,10 @@
-## Frame images into square with their dominant color
+## Frame images with their dominant color
 
 __Pure front-end app using FileReader & Canvas Web API__
 
 <a href="https://southchen.github.io/dominant-color-frame/">Entry</a>
+
+<img src="screen shot.png" alt="screen shot" style="zoom:47%;" />
 
 ### The demand
 

@@ -11,6 +11,11 @@ const options = {
 };
 function handleFiles(files) {
   for (let file of files) {
+    var imageType = /^image\//;
+
+    if (!imageType.test(file.type)) {
+      continue;
+    }
     //console.log(files);
     let image = new Image();
     image.file = file;
@@ -62,7 +67,8 @@ function handleFiles(files) {
 
 function draw(img, element, options) {
   var mar = 80;
-
+  img.width = (1, Math.floor(img.width));
+  img.height = Math.max(1, Math.floor(img.height));
   var landscape = img.width > img.height ? true : false;
 
   if (landscape) {
@@ -80,6 +86,7 @@ function draw(img, element, options) {
   let ctx = element.getContext('2d');
   ctx.clearRect(0, 0, element.width, element.height);
   ctx.drawImage(img, 0, 0);
+
   const data = ctx.getImageData(0, 0, img.width, img.height).data;
 
   let color = getImageColor(img, data);
