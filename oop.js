@@ -12,13 +12,29 @@ window.addEventListener('load', () => {
         shadowBlur: 4,
         shadowColor: 'rgba(0,0,0,0.3)',
       };
+      this.images = [];
+      this.backgrounds = [];
     }
     init() {
       this.inputUp.addEventListener('change', (e) => {
         this.handleFiles(e.target.files);
       });
+      document.querySelector('#add').addEventListener('click', () => {
+        this.images.forEach((image, i) => {
+          console.log(image.src);
+          this.addShadow(image, this.backgrounds[i], this.options);
+        });
+        //this.addShadow(this.image, this.background, this.options);
+      });
+
+      document.querySelector('#remove').addEventListener('click', () => {
+        this.images.forEach((image, i) => {
+          this.addShadow(image, this.backgrounds[i]);
+        });
+      });
     }
     handleFiles(files) {
+      let images = [];
       for (let file of files) {
         var imageType = /^image\//;
 
@@ -26,36 +42,27 @@ window.addEventListener('load', () => {
           continue;
         }
         //console.log(files);
-        this.image = new Image();
-        this.image.file = file;
+        let image = new Image();
+        image.file = file;
 
         this.reader = new FileReader();
 
         var p = new Promise((res, rej) => {
           this.reader.addEventListener('load', (e) => {
-            this.image.src = e.target.result;
+            image.src = e.target.result;
             res();
           });
         });
 
         p.then(() => {
           // console.log(image.height);
-          if (this.image.height > 400) {
-            let ratio = this.image.width / this.image.height;
-            this.image.height = '400';
-            this.image.width = `${ratio * 400}`;
+          if (image.height > 400) {
+            let ratio = image.width / image.height;
+            image.height = '400';
+            image.width = `${ratio * 400}`;
           }
-
-          this.background = document.createElement('canvas');
-          document.querySelector('.container').appendChild(this.background);
-          this.draw(this.image, this.background);
-
-          document.querySelector('#add').addEventListener('click', () => {
-            this.addShadow(this.image, this.background, this.options);
-          });
-          document.querySelector('#remove').addEventListener('click', () => {
-            this.addShadow(this.image, this.background);
-          });
+          this.images.push(image);
+          this.createCtx(image);
         });
 
         this.reader.readAsDataURL(file);
@@ -72,6 +79,13 @@ window.addEventListener('load', () => {
         });
       });
     }
+    createCtx(image) {
+      let background = document.createElement('canvas');
+      this.backgrounds.push(background);
+      document.querySelector('.container').appendChild(background);
+      this.draw(image, background);
+    }
+
     draw(img, element, options) {
       var mar = 80;
       img.width = (1, Math.floor(img.width));
