@@ -180,7 +180,6 @@
           this.draw(e, element);
         }
       })();
-    }),
-      console.log(navigator.userAgent);
+    });
   },
 ]);
