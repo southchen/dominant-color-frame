@@ -1,8 +1,8 @@
 :root {
-  font-size: 16px;
+  font-size: 1vw;
 }
 h2 {
-  font-size: 30px;
+  font-size: 3rem;
   margin-top: 3px;
 }
 span {
@@ -69,10 +69,19 @@ input {
   margin-bottom: 4px;
   border: solid rgba(128, 128, 128, 0.541) 1px;
   border-radius: 10px;
+  font-size: 1rem;
 }
 a {
   text-decoration: none;
   color: black;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 14px;
+}
+.ui.button {
+  font-size: 0.8rem;
+}
+@media screen and (max-width: 988px) {
+  :root {
+    font-size: 2.2vw;
+  }
 }
