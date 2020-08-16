@@ -1,7 +1,7 @@
 node_modules
 *.jpeg
-*.jpg
-*.png
+# *.jpg
+# *.png
 .DS_Store
 !Untitled Diagram.jpg
 index ori.html
