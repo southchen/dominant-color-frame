@@ -1,36 +1,56 @@
-## Frame images with their dominant color
+# Dominant Color Frame
 
-__Pure front-end app using FileReader & Canvas Web API__
+> A pure front-end web application that frames images with their dominant color using FileReader & Canvas Web API
 
-<a href="https://southchen.github.io/dominant-color-frame/">Entry</a>
+[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://southchen.github.io/dominant-color-frame/)
 
-<img src="screen shot.png" alt="screen shot" style="zoom:47%;" />
+![Screenshot](public/screen%20shot.png)
 
-### The demand
+## Overview
 
-I love to take photos in the different ratios (eg. 3:4,16:9 ) in both landscape and portrait.
+This tool solves a common problem for photographers and content creators: maintaining visual consistency when uploading images with different aspect ratios to social media platforms.
 
-But this leads to one subtle issue when I was trying to upload to social media that the images in different ratios and orientations are not perfectly aligned. And I don't want Instagram to corp the photos to destroy the original composition.
+Instead of letting platforms crop your carefully composed photos, this app automatically frames them with a border using the image's dominant color, creating a cohesive and professional look.
 
-So, I have come up with this solution. Wrapping the photo with its dominant color looks cool (to me, at least).
+## Problem Statement
 
-### Features
+When uploading photos with different aspect ratios (3:4, 16:9, etc.) and orientations to social media:
+- Images appear misaligned in feeds
+- Platforms may crop photos, destroying the original composition
+- Visual consistency is lost across your content
 
-No 3-rd party library (except the style library Semantic). Pure vanilla javascript.
+## Solution
 
-It's pure front-end.
+Frame each image with its dominant color to:
+- ✨ Maintain original composition
+- 🎨 Create visual harmony across different aspect ratios
+- 📱 Ensure consistent appearance on social media feeds
 
-Support multiple images upload and batch download.
+## Features
 
-Toggle the output with/without shadow beneath the image.
+- **Pure Frontend**: No server required, runs entirely in the browser
+- **Vanilla JavaScript**: Minimal dependencies (only Semantic UI for styling)
+- **Batch Processing**: Upload and process multiple images at once
+- **Batch Download**: Download all processed images as a ZIP file
+- **Shadow Toggle**: Optional drop shadow effect for enhanced visual appeal
+- **Real-time Preview**: See results instantly as you upload
 
-### Implementation
+## Technical Implementation
 
-FileReader & Canvas Web API 
-Promisify the function of resizing of the file before its rendering on the page
+- **FileReader API**: For client-side file handling
+- **Canvas API**: For image processing and dominant color extraction
+- **Promise-based**: Asynchronous file processing with proper error handling
+- **Responsive Design**: Works on desktop and mobile devices
 
+## Usage
 
-### Sample
+1. Visit the [live demo](https://southchen.github.io/dominant-color-frame/)
+2. Upload one or multiple images
+3. Toggle shadow effect if desired
+4. Download individual images or batch download all
 
+## Example
 
-<img src="Untitled Diagram.jpg" alt="Sample" style="zoom:45%;" />
+![Example](public/Untitled%20Diagram.jpg)
+
+*Before and after: Original photos with different aspect ratios transformed into consistently framed images*
